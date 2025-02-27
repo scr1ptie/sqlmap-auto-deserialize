@@ -727,7 +727,7 @@ def paramToDict(place, parameters=None):
                                     message = "it appears that provided value for %sparameter '%s' " % ("%s " % place if place != parameter else "", parameter)
                                     message += "is JSON deserializable. Do you want to inject inside? [y/N] "
 
-                                    if readInput(message, default='N', boolean=True):
+                                    if readInput(message, default='Y', boolean=True):
                                         del testableParameters[parameter]
                                         testableParameters.update(candidates)
                                     break
